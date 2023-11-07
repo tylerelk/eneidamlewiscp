@@ -1,0 +1,46 @@
+:root {
+    --yellow: #997C49;
+    --darkblue: #21202C;
+    --wood: #C6803E;
+    --lightblue: #3D82CC;
+    --pink: #E5CADC;
+    --stone: #858978;
+    --gold: #EBD300;
+    --green: #817C4B;
+    --white: #DEE3EA;
+}
+
+* {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+.main-section {
+    height: 100vh;
+}
+
+#header-banner {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 15vh;
+    object-fit: cover;
+}
+
+#header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#headshot {
+    width: 5rem;
+    height: auto;
+    border: 3px solid var(--stone);
+    border-radius: 50%;
+}
