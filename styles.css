@@ -1,13 +1,10 @@
 :root {
-    --yellow: #997C49;
-    --darkblue: #21202C;
-    --wood: #C6803E;
-    --lightblue: #3D82CC;
-    --pink: #E5CADC;
-    --stone: #858978;
-    --gold: #EBD300;
-    --green: #817C4B;
-    --white: #DEE3EA;
+  --mediumgrey: #737C79;
+  --dark: #161C23;
+  --darkbluegrey: #1E3649;
+  --palegrey: #E7EBEC;
+  --darkteal: #223F45;
+  --yellowbrown: #AD880C;
 }
 
 * {
@@ -16,31 +13,97 @@
 }
 
 html {
-    background-color: var(--darkblue);
-    color: var(--white);
+    background-color: var(--dark);
+    color: var(--palegrey);
+}
+
+#navigation {
+    background: var(--yellowbrown);
+    position: fixed;
+    border: 2px solid var(--palegrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-links {
+    height: 20vh;
+    width: 90%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#nav-links li {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#nav-links>li:hover {
+    animation: nav-hover 100ms forwards;
+}
+
+@keyframes nav-hover {
+    0% {}
+    100% {
+        border-right: 2px solid var(--dark)
+    }
+}
+
+a {
+    color: var(--dark)
+}
+
+#introduction-section {
+    padding: 3rem 10rem;
+    text-align: center;
 }
 
 .main-section {
-    height: 100vh;
+    height: 50vh;
+    padding: 5rem 10rem;
 }
 
 #header-banner {
     position: absolute;
+    left: 0;
+    top: 0;
     z-index: -1;
     width: 100vw;
     height: 15vh;
-    object-fit: cover;
 }
 
-#header-wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+#name-title {
+    font-size: 4rem;
+    border-bottom: 2px solid var(--yellowbrown);
 }
 
 #headshot {
-    width: 5rem;
+    width: 15rem;
     height: auto;
-    border: 3px solid var(--stone);
+    border: 3px solid var(--palegrey);
     border-radius: 50%;
+}
+
+#services-section {
+    background: var(--darkteal);
+}
+
+#education-section {
+    background: var(--darkbluegrey);
+    text-align: right;
+}
+
+#experience-section {
+    background: var(--darkteal);
+}
+
+#volunteer-section {
+    background: var(--darkbluegrey);
+    text-align: right;
+}
+
+#outro-section {
+    background: var(--yellowbrown);
 }
