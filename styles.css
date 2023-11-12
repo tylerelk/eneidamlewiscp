@@ -10,6 +10,7 @@
 * {
     list-style-type: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -20,6 +21,7 @@ html {
 #navigation {
     background: var(--yellowbrown);
     position: fixed;
+    right: 10px;
     border: 2px solid var(--palegrey);
     display: flex;
     justify-content: center;
@@ -29,7 +31,7 @@ html {
 #nav-links {
     height: 20vh;
     width: 90%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -41,13 +43,13 @@ html {
 }
 
 #nav-links>li:hover {
-    animation: nav-hover 100ms forwards;
+    animation: nav-hover 150ms forwards;
 }
 
 @keyframes nav-hover {
     0% {}
     100% {
-        border-right: 2px solid var(--dark)
+        border-left: 2px solid var(--dark)
     }
 }
 
@@ -106,4 +108,21 @@ a {
 
 #outro-section {
     background: var(--yellowbrown);
+    font-size: 2em;
+}
+
+#contact-list {
+    padding: 0;
+}
+
+#social-wrapper {
+    font-size: 3em;
+    width: 30vw;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-wrapper>li>a:hover {
+    color: var(--darkteal)
 }
