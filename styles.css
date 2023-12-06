@@ -11,118 +11,145 @@
     list-style-type: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    font-family: 'Quattrocento', serif;
 }
 
 html {
-    background-color: var(--dark);
+    background-image: url("./max-williams-_OoK2W7OPRM-unsplash.jpg");
     color: var(--palegrey);
+    overflow: hidden;
 }
 
-#navigation {
-    background: var(--yellowbrown);
-    position: fixed;
-    right: 10px;
-    border: 2px solid var(--palegrey);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-#nav-links {
-    height: 20vh;
-    width: 90%;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+h1 {
+    font-size: 30pt;
 }
 
-#nav-links li {
-    text-align: center;
-    font-size: 1.5rem;
+#main-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 1rem;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    position: relative;
 }
 
-#nav-links>li:hover {
-    animation: nav-hover 150ms forwards;
+.decorative-divider {
+    width: 80%;
+    height: 2px;
+    border-radius: 80%;
+    background-color: var(--palegrey);
+    margin: auto;
 }
 
-@keyframes nav-hover {
-    0% {}
-    100% {
-        border-left: 2px solid var(--dark)
-    }
-}
-
-a {
-    color: var(--dark)
-}
-
-#introduction-section {
-    padding: 3rem 10rem;
-    text-align: center;
-}
-
-.main-section {
-    height: 50vh;
-    padding: 5rem 10rem;
-}
-
-#header-banner {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 15vh;
-}
-
-#name-title {
-    font-size: 4rem;
-    border-bottom: 2px solid var(--yellowbrown);
+.transparent-letter {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url(./max-williams-_OoK2W7OPRM-unsplash.jpg);
+    font-size: 70pt;
+    color: transparent;
 }
 
 #headshot {
-    width: 15rem;
-    height: auto;
+    width: 300px;
     border: 3px solid var(--palegrey);
     border-radius: 50%;
 }
 
-#services-section {
-    background: var(--darkteal);
+.scroll-arrow {
+    width: 4rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
 
-#education-section {
-    background: var(--darkbluegrey);
+.section {
+    height: 85vh;;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem 0;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+h3 {
     text-align: right;
+    margin: 2rem 0;
 }
 
-#experience-section {
-    background: var(--darkteal);
+.intro {
+    background-color: var(--darkbluegrey);
+    text-align: center;
 }
 
-#volunteer-section {
-    background: var(--darkbluegrey);
-    text-align: right;
+.services {
+    background-color: var(--darkteal);
 }
 
-#outro-section {
-    background: var(--yellowbrown);
-    font-size: 2em;
+.experience {
+    background-color: var(--darkbluegrey);
 }
 
-#contact-list {
-    padding: 0;
+.education {
+    background-color: var(--darkteal);
 }
 
-#social-wrapper {
-    font-size: 3em;
-    width: 30vw;
-    margin-top: 1.5rem;
+.community {
+    background-color: var(--darkbluegrey);
+}
+
+.community > h2 {
+    text-align: center;
+}
+
+.outro {
+    background-color: var(--yellowbrown);
+}
+
+.outro > a {
+    color: var(--darkteal);
+    text-align: center;
+    font-size: 16pt;
+}
+
+.social-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-#social-wrapper>li>a:hover {
-    color: var(--darkteal)
+.social-icon {
+    width: 4rem;
+    margin: 0 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+}
+
+button {
+    margin: 1rem 0;
+    width: 5rem;
+    height: 3rem;
+    background-color: var(--darkteal);
+    border: 2px solid var(--mediumgrey);
+    color: var(--palegrey);
+    border-radius: 10px;
+}
+
+form > input {
+    width: 90%;
+    height: 2rem;
+
 }
